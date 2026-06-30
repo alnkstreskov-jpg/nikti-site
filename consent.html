@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Согласие на обработку персональных данных — NIKTI</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'y2k-blue': '#0033cc',
+                        'y2k-magenta': '#ff00cc',
+                        'y2k-yellow': '#fff000',
+                    },
+                    fontFamily: {
+                        'syne': ['Syne', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'brutal-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            background-image: conic-gradient(
+                #0033cc 90deg, 
+                transparent 90deg 180deg, 
+                #0033cc 180deg 270deg, 
+                transparent 270deg
+            );
+            background-size: 100px 100px;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #000;
+        }
+        
+        .btn-brutal {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-brutal:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+        }
+        .btn-brutal:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto w-full flex-grow flex flex-col items-center">
+        <!-- Logo / Back button -->
+        <a href="index.html" class="self-start btn-brutal bg-y2k-blue text-white font-syne font-bold text-lg uppercase px-6 py-2 border-4 border-black mb-8 inline-block shadow-brutal">
+            ← На главную
+        </a>
+
+        <!-- Content -->
+        <div class="bg-white border-4 border-black p-8 md:p-12 shadow-brutal-lg w-full relative">
+            <h1 class="font-syne font-black text-3xl md:text-5xl uppercase mb-8 text-y2k-blue drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
+                Согласие на обработку<br>персональных данных
+            </h1>
+            
+            <div class="space-y-6 font-inter text-base md:text-lg leading-relaxed">
+                <p>Проставляя галочку или нажимая на кнопку "Записаться" на сайте студии маникюра NIKTI, я даю свое согласие на обработку моих персональных данных (далее – Согласие) в соответствии с Федеральным законом от 27.07.2006 г. №152-ФЗ «О персональных данных».</p>
+
+                <p><strong>1. Перечень обрабатываемых персональных данных:</strong><br>
+                - Имя, Фамилия;<br>
+                - Контактный телефон;<br>
+                - Адрес электронной почты (e-mail);<br>
+                - Пользовательские данные (сведения о местоположении, тип и версия ОС, тип и версия Браузера, тип устройства и разрешение его экрана, источник откуда пришел на сайт пользователь, язык ОС и Браузера, какие страницы открывает и на какие кнопки нажимает пользователь, IP-адрес).</p>
+
+                <p><strong>2. Цели обработки:</strong><br>
+                - Идентификация пользователя на сайте;<br>
+                - Запись на услуги студии красоты;<br>
+                - Установление с пользователем обратной связи, включая направление уведомлений, запросов и информации, касающихся оказания услуг, а также обработка запросов и заявок от пользователя;<br>
+                - Улучшение качества работы сайта и его содержания.</p>
+
+                <p><strong>3. Действия с персональными данными:</strong><br>
+                Согласие дается на совершение следующих действий с персональными данными: сбор, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ), блокирование, удаление, уничтожение персональных данных.</p>
+
+                <p><strong>Передача персональных данных третьим лицам</strong><br>
+                Для достижения целей обработки, указанных в настоящей Политике, Оператор (Студия маникюра NIKTI) осуществляет обработку персональных данных Пользователей как самостоятельно, так и с привлечением сторонних сервисов (поручением обработки третьим лицам).<br><br>
+                Пользователь соглашается с тем, что в целях организации онлайн-записи на услуги студии, автоматического подтверждения записей и отправки уведомлений о визитах, Оператор вправе передавать собранные персональные данные (Имя, номер телефона) следующему лицу:<br><br>
+                <strong>Партнер (обработчик данных):</strong> Общество с ограниченной ответственностью «Уайклиентс» (ООО «Уайклиентс»)<br>
+                <strong>ОГРН:</strong> 1157746369113<br>
+                <strong>Адрес места нахождения:</strong> 127015, г. Москва, ул. Новодмитровская, д. 2, корп. 1, эт. 5, пом. XLII, ком. 1<br>
+                <strong>Действия с данными:</strong> Сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ), блокирование, удаление, уничтожение персональных данных с использованием средств автоматизации.<br><br>
+                ООО «Уайклиентс» осуществляет обработку персональных данных по поручению Оператора (Студия маникюра NIKTI) и обязуется соблюдать конфиденциальность персональных данных, а также обеспечивать их безопасность при обработке в соответствии с требованиями ст. 19 Федерального закона № 152-ФЗ «О персональных данных».</p>
+
+                <p><strong>4. Срок действия согласия и порядок его отзыва:</strong><br>
+                Настоящее согласие действует бессрочно с момента предоставления данных и может быть отозвано мной в любой момент путем направления письменного заявления Оператору по контактным данным, указанным на сайте.</p>
+                
+                <p>Я подтверждаю, что, давая такое Согласие, я действую по собственной воле и в своих интересах.</p>
+                
+                <p><strong>Дополнение к ОПД:</strong><br>
+                Ознакомиться с дополнением к Согласию на обработку персональных данных можно по <a href="https://1drv.ms/w/c/ba18c935b2686ea4/IQD8_oRG_bZ7Rb0gKWWq8aWWAdAPe4AnkaJOyjcfP4hgrdw?e=1ffbOS" target="_blank" class="underline font-bold hover:text-y2k-yellow">этой ссылке</a>.</p>
+
+                <div class="mt-8 p-4 bg-y2k-magenta text-white border-2 border-black font-semibold text-sm">
+                    <strong>Реквизиты оператора:</strong><br>
+                    Студия маникюра NIKTI<br>
+                    Физическое лицо, зарегистрированное в качестве налогоплательщика налога на профессиональный доход (самозанятый)<br>
+                    ФИО: Литвинова Анастасия Олеговна<br>
+                    ИНН: 631943848081<br>
+                    Адрес: Россия, г. Самара<br>
+                    Email: niktismr63@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

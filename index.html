@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKTI — Маникюрный салон | Эстетика и стиль</title>
+    <meta name="description"
+        content="Маникюрный салон NIKTI. Стильный маникюр, стерилизация по СанПиН в 3 этапа. Запишитесь онлайн!">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NailSalon",
+      "name": "NIKTI",
+      "url": "https://nikti-salon.ru",
+      "telephone": "+79991234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Куйбышева, 78",
+        "addressLocality": "Самара",
+        "postalCode": "443099",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.189512,
+        "longitude": 50.091013
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400..900&family=Inter:wght@400;600;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'y2k-blue': '#0033cc',
+                        'y2k-magenta': '#ff00cc',
+                        'y2k-yellow': '#fff000',
+                    },
+                    fontFamily: {
+                        'syne': ['Unbounded', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'brutal-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Checkerboard Pattern */
+        body {
+            background-color: #ffffff;
+            background-image: conic-gradient(#0033cc 90deg,
+                    transparent 90deg 180deg,
+                    #0033cc 180deg 270deg,
+                    transparent 270deg);
+            background-size: 100px 100px;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #000;
+        }
+
+        /* Y2K Marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #ff00cc;
+            color: #fff000;
+            padding: 10px 0;
+            border-bottom: 4px solid #000;
+            border-top: 4px solid #000;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* 3D Rotating Star */
+        .star-spin {
+            animation: spin-star 10s linear infinite;
+        }
+
+        @keyframes spin-star {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff000;
+            border-left: 2px solid #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ff00cc;
+            border: 2px solid #000;
+        }
+
+        .btn-brutal {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-brutal:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        .btn-brutal:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        @keyframes pulse-brutal {
+            0% {
+                transform: scale(1);
+                box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            }
+
+            50% {
+                transform: scale(1.05) rotate(1deg);
+                box-shadow: 8px 8px 0px 0px rgba(0, 51, 204, 1);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            }
+        }
+
+        .btn-pulse-brutal {
+            animation: pulse-brutal 1.5s infinite;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-pulse-brutal:hover {
+            animation: none;
+            transform: translate(-4px, -4px) scale(1.05) rotate(-1deg);
+            box-shadow: 10px 10px 0px 0px rgba(255, 0, 204, 1);
+        }
+
+        @keyframes disco-shadow {
+            0% {
+                box-shadow: 12px 12px 0px 0px #ff00cc;
+            }
+
+            33% {
+                box-shadow: 12px 12px 0px 0px #fff000;
+            }
+
+            66% {
+                box-shadow: 12px 12px 0px 0px #0033cc;
+            }
+
+            100% {
+                box-shadow: 12px 12px 0px 0px #ff00cc;
+            }
+        }
+
+        .disco-anim {
+            animation: disco-shadow 3s infinite;
+        }
+
+        @keyframes wave-text {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .wave-emoji {
+            display: inline-block;
+            animation: wave-text 2s ease-in-out infinite;
+        }
+
+        @keyframes swipe-anim {
+            0% {
+                transform: translateX(15px) rotate(15deg);
+            }
+
+            50% {
+                transform: translateX(-15px) rotate(-15deg);
+            }
+
+            100% {
+                transform: translateX(15px) rotate(15deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee-content text-xl md:text-2xl">
+            ★ NIKTI NAILS ★ БЕЗОПАСНО И СТЕРИЛЬНО ★ СЕКРЕТНЫЙ ПРОМОКОД "хром15" НА -15% ★ ТРЕНДОВЫЕ ДИЗАЙНЫ ★ ЖМИ И ЗАПИСЫВАЙСЯ ★
+            &nbsp;
+            ★ NIKTI NAILS ★ БЕЗОПАСНО И СТЕРИЛЬНО ★ СЕКРЕТНЫЙ ПРОМОКОД "хром15" НА -15% ★ ТРЕНДОВЫЕ ДИЗАЙНЫ ★ ЖМИ И ЗАПИСЫВАЙСЯ ★
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b-4 border-black p-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <!-- Оригинальный логотип-картинка -->
+                <img src="logo.png" alt="NIKTI Logo"
+                    class="h-16 md:h-20 object-contain transform hover:scale-105 transition-transform cursor-pointer">
+            </div>
+
+            <nav class="hidden md:flex gap-6 font-syne font-bold text-lg uppercase">
+                <a href="#gallery" class="hover:text-y2k-magenta transition-colors">Галерея</a>
+                <a href="#prices" class="hover:text-y2k-magenta transition-colors">Прайс</a>
+                <a href="#safety" class="hover:text-y2k-magenta transition-colors">Безопасность</a>
+                <a href="#contacts" class="hover:text-y2k-magenta transition-colors">Контакты</a>
+            </nav>
+
+            <!-- Yclients Widget Button / Link with Consent Checkbox -->
+            <div class="flex items-center gap-2 md:gap-3">
+                <label
+                    class="flex items-center gap-1 md:gap-2 text-[10px] md:text-xs font-inter cursor-pointer max-w-[120px] md:max-w-[150px] leading-tight">
+                    <input type="checkbox" id="header-consent"
+                        class="w-4 h-4 md:w-5 md:h-5 accent-y2k-magenta border-2 border-black flex-shrink-0 cursor-pointer">
+                    <span>Согласен с <a href="policy.html" target="_blank"
+                            class="underline hover:text-y2k-magenta">Политикой</a> и <a href="consent.html"
+                            target="_blank" class="underline hover:text-y2k-magenta">ОПД</a></span>
+                </label>
+                <a href="https://n1231119.yclients.com/company/1127241/personal/select-services?o=" id="booking-btn"
+                    target="_blank" rel="noopener noreferrer"
+                    class="ms_booking btn-brutal bg-y2k-blue text-white font-syne font-bold text-base md:text-lg uppercase px-4 py-2 md:px-6 md:py-2 border-4 border-black rounded-full shadow-brutal inline-block text-center cursor-pointer pointer-events-none opacity-50 transition-opacity">
+                    Записаться
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+
+        <!-- Hero Section / About -->
+        <section id="about" class="py-16 px-4 relative overflow-hidden bg-white border-b-4 border-black">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    <!-- Left: Image with Animation -->
+                    <div class="relative w-full max-w-md mx-auto lg:max-w-full z-10">
+                        <!-- Decorative background offset blocks -->
+                        <div
+                            class="absolute inset-0 bg-y2k-magenta border-4 border-black transform translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8 z-0">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-y2k-yellow border-4 border-black transform translate-x-2 translate-y-2 lg:translate-x-4 lg:translate-y-4 z-0">
+                        </div>
+
+                        <!-- Main Image Container / Infinite Slider -->
+                        <div class="relative bg-white border-4 border-black disco-anim z-10 flex flex-col overflow-hidden"
+                            id="hero-slider-container">
+                            <div
+                                class="relative w-full h-[350px] sm:h-[450px] md:h-[600px] overflow-hidden group touch-pan-y">
+                                <!-- Slider Track -->
+                                <div id="hero-slider-track"
+                                    class="flex w-full h-full transition-transform duration-400 ease-in-out">
+                                    <div class="min-w-full h-full relative" data-index="0">
+                                        <img src="i.jpg" alt="Студия маникюра NIKTI" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="min-w-full h-full relative" data-index="1">
+                                        <img src="interior/XXXL (1).webp" alt="Интерьер студии 1"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="min-w-full h-full relative" data-index="2">
+                                        <img src="interior/XXXL (2).webp" alt="Интерьер студии 2"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Icons (Arrows) -->
+                                <button id="slider-prev"
+                                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-y2k-yellow border-2 border-black w-12 h-12 rounded-full flex items-center justify-center font-bold text-2xl shadow-brutal opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-opacity z-20 cursor-pointer hover:bg-y2k-magenta hover:text-white pb-1 pl-1">
+                                    ←
+                                </button>
+                                <button id="slider-next"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-y2k-yellow border-2 border-black w-12 h-12 rounded-full flex items-center justify-center font-bold text-2xl shadow-brutal opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-opacity z-20 cursor-pointer hover:bg-y2k-magenta hover:text-white pb-1 pr-1">
+                                    →
+                                </button>
+
+                                <!-- Swipe Hint Overlay -->
+                                <div id="swipe-hint"
+                                    class="absolute inset-0 flex items-center justify-center bg-black/10 z-10 pointer-events-none transition-opacity duration-700">
+                                    <div
+                                        class="bg-white px-4 py-2 rounded-full border-2 border-black font-syne font-bold uppercase shadow-brutal flex items-center gap-2">
+                                        <span>Листай</span>
+                                        <span class="text-2xl animate-[swipe-anim_2s_infinite]">👆</span>
+                                    </div>
+                                </div>
+
+                                <!-- Dots -->
+                                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                    <div
+                                        class="slider-dot w-3 h-3 rounded-full bg-y2k-magenta border-2 border-black transition-colors">
+                                    </div>
+                                    <div
+                                        class="slider-dot w-3 h-3 rounded-full bg-white border-2 border-black transition-colors">
+                                    </div>
+                                    <div
+                                        class="slider-dot w-3 h-3 rounded-full bg-white border-2 border-black transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-4 bg-black text-white font-syne font-bold text-center text-2xl uppercase tracking-widest border-t-4 border-black relative z-30">
+                                NIKTI Studio
+                            </div>
+                        </div>
+
+                        <!-- Floating Emoji -->
+                        <div
+                            class="absolute -top-8 -right-8 text-7xl z-20 wave-emoji origin-bottom cursor-pointer hover:scale-110 transition-transform">
+                            💅
+                        </div>
+                    </div>
+
+                    <!-- Right: Text Content Grid -->
+                    <div class="flex flex-col gap-6 z-10 mt-8 lg:mt-0">
+
+                        <!-- Intro Card -->
+                        <div
+                            class="bg-white p-6 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                            <h2 class="font-syne font-black text-4xl md:text-5xl text-y2k-blue uppercase mb-4 italic">
+                                Привет! <span class="wave-emoji">👋</span></h2>
+                            <p class="font-inter text-lg md:text-xl font-bold leading-relaxed">
+                                Мы — маленькая уютная студия маникюра. Нас всего двое, и это не случайно. Мы не гонимся
+                                за потоком. Нам важно, чтобы каждая клиентка уходила с ноготками, от которых сама не
+                                может оторвать глаз. Поэтому каждую работу делаем так, как делали бы себе — без
+                                компромиссов и спешки.
+                            </p>
+                        </div>
+
+                        <!-- Details Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Atmosphere Card -->
+                            <div
+                                class="bg-y2k-yellow p-6 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform flex flex-col">
+                                <h3
+                                    class="font-syne font-black text-2xl uppercase mb-3 bg-white inline-block px-2 border-2 border-black rotate-[-2deg] self-start">
+                                    Что у нас? ✨</h3>
+                                <p class="font-inter font-semibold text-base leading-snug">
+                                    <span class="font-bold underline decoration-y2k-magenta decoration-2">Чистота и
+                                        стерильность</span> — это база. А сверху — тёплая атмосфера: мягкий свет,
+                                    чай/кофе на выбор, вкусняшки и личный iPad для сериалов или Pinterest. Два часа —
+                                    только для тебя.
+                                </p>
+                            </div>
+
+                            <!-- Trust Card -->
+                            <div
+                                class="bg-y2k-magenta text-white p-6 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform flex flex-col">
+                                <h3 class="font-syne font-black text-2xl uppercase mb-3 text-y2k-yellow">Почему мы? 🤝
+                                </h3>
+                                <p class="font-inter font-semibold text-base leading-snug drop-shadow-md">
+                                    Мы сами отвечаем за свои работы. Без наёмных мастеров и текучки. Постоянно учимся и
+                                    тестируем новые материалы. Нам правда важно делать круто, а не просто «нормально».
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Outro Banner -->
+                        <div
+                            class="bg-black text-white font-syne font-bold text-lg md:text-xl p-5 border-4 border-y2k-blue shadow-[6px_6px_0_0_#fff000] transform rotate-1 mt-2 text-center hover:scale-105 transition-transform cursor-default">
+                            Полистайте наши работы — они скажут больше любых слов <br>
+                            <span class="text-y2k-magenta inline-block mt-2">Очень рады, что вы нас нашли. Надеемся, вы
+                                останетесь ✨</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 px-4 relative overflow-hidden">
+            <!-- Decorative SVG Star (Gallery) -->
+            <svg class="star-spin absolute top-20 right-4 md:right-20 w-24 h-24 text-y2k-magenta fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
+                style="animation-duration: 15s; animation-direction: reverse;" viewBox="0 0 24 24">
+                <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+            </svg>
+            <svg class="star-spin absolute bottom-20 right-4 md:right-10 w-16 h-16 text-y2k-blue fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
+                style="animation-duration: 10s;" viewBox="0 0 24 24">
+                <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+            </svg>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <h1
+                    class="font-syne font-black text-6xl md:text-8xl text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-center mb-12 uppercase italic bg-y2k-magenta inline-block px-8 py-2 border-4 border-black rotate-[-1deg] shadow-brutal-lg relative z-10">
+                    Галерея
+                </h1>
+
+                <!-- Masonry-ish Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/-dMEXx_n6Wlwxg_3HzEtHJZt_-rPZgUOAT-n8k9nHdGYJIXmgdniKb9-YuIJHeGlRy2CupTx38aR4chP-B1ETKE3.jpg" alt="Nail Art 1" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/4KHonLB517uZZS_-oko-_8qjnAe2SLT_HbxrMWc1pE0AHpOgub-i_7c6SvoNOUJHwiVI6QjinSTOwPWP_T-n8XEn.jpg" alt="Nail Art 2" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/9weMyfiovbNINcOCqFPgnG1JQZsWdHC5lrNce2SaqYKSyEMX0NxIzFgq71ghJoLNLAwKMcShrDrRol_A6ywDcIxK.jpg" alt="Nail Art 3" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/EDa7hJVzpuc.jpg" alt="Nail Art 4" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/KCMN3iFigv4.jpg" alt="Nail Art 5" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/L0F89CNYbZCyeIW3Hwc2-pzEEdAvbcRP8OBxuCCNumEpUaAZVvffEMVniy3Aux_yDL295TycDSi-dLBgxKO6xANN.jpg" alt="Nail Art 6" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Gallery Items -->
+                <div id="more-gallery" class="hidden mt-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/L2aSXQpVPuA.jpg" alt="Nail Art 7" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/LnKU9VvnaGphZCjQKkrrCuDC_rG_3lXwNHPVDGaAlGsdUhJkZu0cQboGQerhsH2RjF2DlMWCNK56J836tWQbnUTe.jpg" alt="Nail Art 8" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/Ow-j7OJMINxeXCEbPdViWy4a0LyerHwddchdfuQI6BulbcfMJ9HvvkyOVDJx0rzOT1JZvjhPsG0-asBRADfWn6H_.jpg" alt="Nail Art 9" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/PvwSGTOsoZxpaKBQhsnDfc0kZrtshKEEYinGm7osO469Z5tpZEhSibv0zOTztm4_kKNnPAze4kfZ1dmkZT4eqK2u.jpg" alt="Nail Art 10" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/ZcHXS8ON-O811Xx3G4E5UiT4j_oOnmpCvztqKfJ4PuwaJ0gUUrFUBBSnVfq30OJoyG-hcz1We7-wY0AnH-VYc1Ao.jpg" alt="Nail Art 11" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/a1176411082ad9662f732b66af6fd750.jpg" alt="Nail Art 12" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/fgcDjzjueDw.jpg" alt="Nail Art 13" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/hf0xmcWmf2DuUcLOs00Z6lDzLtpxf1eenrTCTNRS8xsv3V6ObfqposyPV-SRORju6QAw9qOKzotDBr9VH2llNUcI.jpg" alt="Nail Art 14" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/mcYmiCkF4NWGvFPk-vlAmoPiTg5lcuhTOEhmhLJMvX_FyTFHtVwR1DAg7Z77kxRjE53WVBQaYNDo5MlUHi9LR_SN.jpg" alt="Nail Art 15" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/orig.jpg" alt="Nail Art 16" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/qqqМонтажная область 2 (1).png" alt="Nail Art 17" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/qqqМонтажная обяласть 2 копия.png" alt="Nail Art 18" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/qqqМонтажная обяласть 2.png" alt="Nail Art 19" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/vUGPf6xQQAWsu967tizQr7-JFL0tOZF_SrkUXttF26LsnJA24JKDxN7i16RX9C67QhxO-N0ucYz7rk107cZmdgBk.jpg" alt="Nail Art 20" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
+                        <div
+                            class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
+                            <img src="ph/w6gnkAgGL0N6nclWd5266699AhB7K3PH2cgT5q3b2swuvgjy5uWJLCXz3BPrRBetXct49OPa_uJRgZ_tgteoElv-.jpg" alt="Nail Art 21" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Controls -->
+                <div class="mt-12 flex flex-col items-center gap-4">
+                    <button id="show-more-btn"
+                        class="font-syne font-black text-2xl uppercase italic bg-y2k-yellow text-black px-12 py-4 border-4 border-black btn-pulse-brutal flex items-center gap-2 cursor-pointer z-20">
+                        Больше эстетики <span>★</span>
+                    </button>
+                    <button id="hide-more-btn"
+                        class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 font-syne font-black text-xl uppercase bg-y2k-magenta text-white px-8 py-3 border-4 border-black shadow-[4px_4px_0_rgba(255,240,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0_rgba(255,240,0,1)] transition-all cursor-pointer z-50 rounded-full">
+                        Скрыть галерею
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section id="prices" class="py-16 px-4 relative overflow-hidden">
+            <!-- Decorative SVG Star (Prices) -->
+            <svg class="star-spin absolute top-10 right-10 md:right-32 w-16 h-16 text-y2k-blue fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
+                style="animation-duration: 8s;" viewBox="0 0 24 24">
+                <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+            </svg>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-syne font-black text-6xl md:text-8xl text-y2k-yellow drop-shadow-[4px_4px_0_rgba(0,0,0,1)] uppercase italic bg-y2k-magenta inline-block pl-10 pr-6 pt-4 pb-2 border-4 border-black rotate-[2deg] shadow-brutal-lg leading-none">
+                        Прайс
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1: Gel Polish -->
+                    <div
+                        class="flex flex-col h-full bg-white border-4 border-black shadow-brutal p-6 relative group transform hover:-translate-y-2 transition-transform">
+                        <!-- Top content wrapper that grows -->
+                        <div class="flex-1">
+                            <!-- Checkerboard header illusion -->
+                            <div class="h-10 w-full border-b-4 border-black mb-6"
+                                style="background: repeating-conic-gradient(#0033cc 0 90deg, #fff 0 180deg) 0 0/40px 40px;">
+                            </div>
+                            <h3 class="font-inter font-black text-3xl uppercase mb-2 leading-tight">Гель лак <br>с
+                                укреплением</h3>
+                            <div
+                                class="inline-block border-2 border-black px-3 py-1 font-bold text-lg float-right -mt-16 bg-white shadow-brutal">
+                                от 2000</div>
+
+                            <h4 class="font-bold text-xl mt-6 mb-2 uppercase">В стоимость входит</h4>
+                            <p class="font-semibold text-[0.95rem] leading-tight mb-4">снятие, комбинированный маникюр,
+                                ремонт до 3х ногтей, укрепление, покрытие гель лаком.</p>
+                            <p class="font-bold text-sm text-black leading-tight mb-4 uppercase">цена указана до длины
+                                2, ногти длиннее относятся к коррекции наращивания</p>
+                        </div>
+
+                        <!-- Bottom aligned content -->
+                        <div>
+                            <div class="mt-2 mb-4">
+                                <h4 class="font-bold text-xl mb-2 uppercase">Дизайн</h4>
+                                <p class="font-semibold text-[0.95rem] leading-tight text-gray-800">По поводу дизайна
+                                    лучше проконсультироваться в сообщениях ВК или Telegram. Мастер всегда подскажет и
+                                    поможет с выбором.</p>
+                            </div>
+
+                            <!-- Mini Logo placeholder in card -->
+                            <div class="mt-6 flex justify-center">
+                                <span
+                                    class="font-syne font-black text-2xl text-white drop-shadow-[2px_2px_0_rgba(0,51,204,1)] tracking-widest lowercase italic bg-y2k-yellow border-2 border-y2k-magenta px-4 py-1 rounded-full">nikti</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Extensions -->
+                    <div
+                        class="flex flex-col h-full bg-white border-4 border-black shadow-brutal p-6 relative group transform hover:-translate-y-2 transition-transform">
+                        <div class="flex-1">
+                            <div class="h-10 w-full border-b-4 border-black mb-6"
+                                style="background: repeating-conic-gradient(#0033cc 0 90deg, #fff 0 180deg) 0 0/40px 40px;">
+                            </div>
+
+                            <div
+                                class="flex justify-between font-inter font-black text-[0.85rem] sm:text-xl uppercase border-b-2 border-black pb-2 mb-2 gap-1">
+                                <div class="w-1/4">Длина</div>
+                                <div class="w-1/3 text-center">Наращивание</div>
+                                <div class="w-1/3 text-right">Коррекция</div>
+                            </div>
+
+                            <ul class="font-black text-lg sm:text-xl space-y-1 mb-8">
+                                <li
+                                    class="flex justify-between border-b border-gray-300 py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">1</div>
+                                    <div class="w-1/3 text-center">2500</div>
+                                    <div class="w-1/3 text-right">2400</div>
+                                </li>
+                                <li
+                                    class="flex justify-between border-b border-gray-300 py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">2</div>
+                                    <div class="w-1/3 text-center">2600</div>
+                                    <div class="w-1/3 text-right">2500</div>
+                                </li>
+                                <li
+                                    class="flex justify-between border-b border-gray-300 py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">3</div>
+                                    <div class="w-1/3 text-center">2700</div>
+                                    <div class="w-1/3 text-right">2600</div>
+                                </li>
+                                <li
+                                    class="flex justify-between border-b border-gray-300 py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">4</div>
+                                    <div class="w-1/3 text-center">2800</div>
+                                    <div class="w-1/3 text-right">2700</div>
+                                </li>
+                                <li
+                                    class="flex justify-between border-b border-gray-300 py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">5</div>
+                                    <div class="w-1/3 text-center">2900</div>
+                                    <div class="w-1/3 text-right">2800</div>
+                                </li>
+                                <li
+                                    class="flex justify-between border-b border-black py-1 hover:bg-gray-100 transition-colors">
+                                    <div class="w-1/4">6</div>
+                                    <div class="w-1/3 text-center">3000</div>
+                                    <div class="w-1/3 text-right">2900</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="mt-2 mb-4">
+                                <h4 class="font-bold text-xl mb-2 uppercase">В стоимость входит</h4>
+                                <p class="font-semibold text-[0.95rem] leading-tight text-gray-800">снятие,
+                                    комбинированный маникюр, наращивание/коррекция, покрытие гель лаком.</p>
+                            </div>
+
+                            <div class="mt-6 flex justify-center">
+                                <span
+                                    class="font-syne font-black text-2xl text-white drop-shadow-[2px_2px_0_rgba(0,51,204,1)] tracking-widest lowercase italic bg-y2k-yellow border-2 border-y2k-magenta px-4 py-1 rounded-full">nikti</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Pedicure 1 -->
+                    <div
+                        class="flex flex-col h-full bg-white border-4 border-black shadow-brutal p-6 relative group transform hover:-translate-y-2 transition-transform">
+                        <div class="h-10 w-full border-b-4 border-black mb-6"
+                            style="background: repeating-conic-gradient(#0033cc 0 90deg, #fff 0 180deg) 0 0/40px 40px;">
+                        </div>
+
+                        <div class="space-y-6 border-2 border-black rounded-[30px] p-6 shadow-brutal bg-gray-50">
+                            <div
+                                class="flex justify-between items-center border-b-2 border-dashed border-gray-400 pb-4">
+                                <span class="font-inter font-black text-xl md:text-2xl uppercase pr-2">Педикюр +
+                                    покрытие</span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">1700</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center border-b-2 border-dashed border-gray-400 pb-4">
+                                <span class="font-inter font-black text-xl md:text-2xl uppercase pr-2">Обработка
+                                    стопы</span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">600
+                                    - 1000</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-inter font-black text-xl md:text-2xl uppercase pr-2">Педикюр
+                                    пальчики</span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">900</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-8 flex justify-center">
+                            <span
+                                class="font-syne font-black text-2xl text-white drop-shadow-[2px_2px_0_rgba(0,51,204,1)] tracking-widest lowercase italic bg-y2k-yellow border-2 border-y2k-magenta px-4 py-1 rounded-full">nikti</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Pedicure 2 -->
+                    <div
+                        class="flex flex-col h-full bg-white border-4 border-black shadow-brutal p-6 relative group transform hover:-translate-y-2 transition-transform">
+                        <div class="h-10 w-full border-b-4 border-black mb-6"
+                            style="background: repeating-conic-gradient(#0033cc 0 90deg, #fff 0 180deg) 0 0/40px 40px;">
+                        </div>
+
+                        <div class="space-y-6 border-2 border-black rounded-[30px] p-6 shadow-brutal bg-gray-50">
+                            <div
+                                class="flex justify-between items-center border-b-2 border-dashed border-gray-400 pb-4">
+                                <span
+                                    class="font-inter font-black text-xl md:text-2xl uppercase leading-tight pr-2">Лечебный
+                                    педикюр<br><span class="text-[1rem] lowercase font-semibold tracking-normal">(без
+                                        покрытия)</span></span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">1300</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center border-b-2 border-dashed border-gray-400 pb-4">
+                                <span
+                                    class="font-inter font-black text-xl md:text-2xl uppercase leading-tight pr-2">Обработка
+                                    стоп +<br>пальчики</span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">900</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="font-inter font-black text-xl md:text-2xl uppercase leading-tight pr-2">Обработка
+                                    стоп +<br>покрытие</span>
+                                <span
+                                    class="font-bold text-xl border-2 border-black px-3 py-1 bg-white shadow-[2px_2px_0_rgba(0,0,0,1)] whitespace-nowrap">2100</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-8 flex justify-center">
+                            <span
+                                class="font-syne font-black text-2xl text-white drop-shadow-[2px_2px_0_rgba(0,51,204,1)] tracking-widest lowercase italic bg-y2k-yellow border-2 border-y2k-magenta px-4 py-1 rounded-full">nikti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sterilization Section -->
+        <section id="safety" class="py-16 px-4">
+            <div
+                class="max-w-5xl mx-auto bg-white border-4 border-black shadow-brutal-lg p-8 md:p-12 relative overflow-hidden">
+
+                <!-- Decorative SVG Star -->
+                <svg class="star-spin absolute -top-10 -right-10 w-32 h-32 text-y2k-yellow fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
+                    viewBox="0 0 24 24">
+                    <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black"
+                        stroke-width="1" />
+                </svg>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Image -->
+                    <div class="bg-y2k-blue p-2 border-4 border-black rotate-2 shadow-brutal">
+                        <img src="XXXL.jpg" alt="Стерилизация инструментов" class="w-full h-auto border-2 border-black"
+                            loading="lazy">
+                    </div>
+
+                    <!-- Text Block -->
+                    <div>
+                        <h2
+                            class="font-syne font-black text-3xl md:text-5xl uppercase mb-6 drop-shadow-[2px_2px_0_rgba(0,0,0,1)] text-y2k-magenta">
+                            Безопасность
+                        </h2>
+                        <p class="font-bold text-lg mb-4">
+                            Мы серьезно относимся к безопасности и здоровью наших клиентов. Именно поэтому мы
+                            обрабатываем инструменты в 3 этапа по правилам СанПиН:
+                        </p>
+                        <ul class="space-y-4 font-inter font-bold text-lg">
+                            <li
+                                class="flex items-start gap-2 bg-y2k-yellow p-3 border-2 border-black shadow-brutal rounded-md">
+                                <span class="font-syne font-black text-xl">1.</span> Дезинфекция (хим. раствор)
+                            </li>
+                            <li
+                                class="flex items-start gap-2 bg-y2k-yellow p-3 border-2 border-black shadow-brutal rounded-md">
+                                <span class="font-syne font-black text-xl">2.</span> Предстерилизационная очистка (в УЗ
+                                ванне)
+                            </li>
+                            <li
+                                class="flex items-start gap-2 bg-y2k-yellow p-3 border-2 border-black shadow-brutal rounded-md">
+                                <span class="font-syne font-black text-xl">3.</span> Стерилизация при помощи
+                                сухожарового шкафа
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="contacts" class="py-16 px-4 relative overflow-hidden">
+            <!-- Decorative SVG Star -->
+            <svg class="star-spin absolute top-1/2 -translate-y-1/2 left-4 md:left-20 w-24 h-24 text-y2k-yellow fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
+                style="animation-duration: 18s; animation-direction: reverse;" viewBox="0 0 24 24">
+                <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+            </svg>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="bg-white border-4 border-black shadow-brutal-lg p-2">
+                    <h3
+                        class="font-syne font-black text-3xl uppercase bg-y2k-blue text-white p-4 border-b-4 border-black text-center mb-0">
+                        Как нас найти</h3>
+                    <!-- Yandex Map: NIKTI, ул. Куйбышева 78, Самара -->
+                    <iframe src="https://yandex.ru/map-widget/v1/?text=Никти%20Самара%20Куйбышева%2078&z=17"
+                        width="100%" height="400" frameborder="0" class="block"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4 border-t-8 border-y2k-magenta relative overflow-hidden">
+        <!-- Decorative SVG Star (Footer) -->
+        <svg class="star-spin absolute top-4 right-10 w-24 h-24 text-y2k-magenta fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0 opacity-50"
+            style="animation-duration: 12s;" viewBox="0 0 24 24">
+            <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+        </svg>
+        <svg class="star-spin absolute bottom-10 left-10 w-16 h-16 text-y2k-blue fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0 opacity-50"
+            style="animation-duration: 9s; animation-direction: reverse;" viewBox="0 0 24 24">
+            <path d="M12 0l2.5 8.5L24 12l-9.5 3.5L12 24l-2.5-8.5L0 12l9.5-3.5z" stroke="black" stroke-width="1" />
+        </svg>
+
+        <!-- Y2K Footer Decoration -->
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-y2k-yellow"></div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Socials -->
+            <div>
+                <h4 class="font-syne font-black text-4xl mb-6 text-y2k-yellow">NIKTI</h4>
+                <div class="flex gap-4">
+                    <a href="https://vk.com/nikti_63" target="_blank" rel="noopener noreferrer"
+                        class="btn-brutal bg-white text-black font-syne font-bold py-2 px-6 border-4 border-black rounded-full shadow-[4px_4px_0_rgba(255,0,204,1)] hover:shadow-[8px_8px_0_rgba(255,0,204,1)] hover:-translate-y-1">
+                        VKontakte
+                    </a>
+                    <a href="https://t.me/nikti63" target="_blank" rel="noopener noreferrer"
+                        class="btn-brutal bg-white text-black font-syne font-bold py-2 px-6 border-4 border-black rounded-full shadow-[4px_4px_0_rgba(0,51,204,1)] hover:shadow-[8px_8px_0_rgba(0,51,204,1)] hover:-translate-y-1">
+                        Telegram
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consent Form / Data processing -->
+            <div class="bg-white text-black p-6 border-4 border-y2k-blue shadow-[4px_4px_0_rgba(255,240,0,1)] rotate-1">
+                <form id="consent-form" class="space-y-4">
+                    <p class="font-bold text-sm uppercase">Оставайтесь на связи</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Ваш Email"
+                            class="flex-grow p-2 border-4 border-black focus:outline-none focus:border-y2k-magenta"
+                            required>
+                        <button type="submit"
+                            class="bg-y2k-magenta text-white font-bold p-2 border-4 border-black btn-brutal">ОК</button>
+                    </div>
+                    <label class="flex items-start gap-2 cursor-pointer mt-4">
+                        <input type="checkbox" required class="mt-1 w-5 h-5 accent-y2k-magenta border-2 border-black"
+                            id="privacy-consent">
+                        <span class="text-xs font-semibold">Я даю согласие на обработку персональных данных в
+                            соответствии с <a href="#" class="text-y2k-blue underline hover:text-y2k-magenta">Политикой
+                                конфиденциальности</a>.</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Security Check: Simple Form Validation for Checkbox -->
+    <script>
+        document.getElementById('consent-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const checkbox = document.getElementById('privacy-consent');
+            if (checkbox.checked) {
+                alert('Спасибо! Вы подписались.');
+            } else {
+                alert('Необходимо согласие на обработку данных.');
+            }
+        });
+
+        // Gallery Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const showBtn = document.getElementById('show-more-btn');
+            const hideBtn = document.getElementById('hide-more-btn');
+            const moreGallery = document.getElementById('more-gallery');
+
+            showBtn.addEventListener('click', () => {
+                moreGallery.classList.remove('hidden');
+                showBtn.classList.add('hidden');
+                hideBtn.classList.remove('hidden');
+            });
+
+            hideBtn.addEventListener('click', () => {
+                moreGallery.classList.add('hidden');
+                showBtn.classList.remove('hidden');
+                hideBtn.classList.add('hidden');
+                // Gently scroll so the "show more" button is visible, not a jarring jump to the top
+                showBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            // Auto-collapse when scrolling past the gallery
+            const gallerySection = document.getElementById('gallery');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // If the gallery completely leaves the viewport
+                    if (!entry.isIntersecting && !moreGallery.classList.contains('hidden')) {
+                        moreGallery.classList.add('hidden');
+                        showBtn.classList.remove('hidden');
+                        hideBtn.classList.add('hidden');
+                    }
+                });
+            }, { threshold: 0 });
+
+            if (gallerySection) {
+                observer.observe(gallerySection);
+            }
+        });
+    </script>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner"
+        class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-max md:max-w-2xl bg-white border-4 border-black shadow-brutal p-4 flex flex-col md:flex-row items-center gap-4 z-[100] transition-opacity duration-500">
+        <p class="font-inter font-bold text-sm md:text-base text-center md:text-left">
+            Мы используем файлы cookie для улучшения работы сайта 🍪
+        </p>
+        <button id="cookie-accept"
+            class="btn-brutal bg-y2k-yellow font-syne font-bold uppercase px-6 py-2 border-4 border-black whitespace-nowrap cursor-pointer">
+            Понятно
+        </button>
+    </div>
+
+    <!-- Global Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header Consent Logic
+            const headerConsent = document.getElementById('header-consent');
+            const bookingBtn = document.getElementById('booking-btn');
+
+            if (headerConsent && bookingBtn) {
+                headerConsent.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        bookingBtn.classList.remove('pointer-events-none', 'opacity-50');
+                    } else {
+                        bookingBtn.classList.add('pointer-events-none', 'opacity-50');
+                    }
+                });
+            }
+
+            // Cookie Banner Logic
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccept = document.getElementById('cookie-accept');
+
+            if (cookieBanner && cookieAccept) {
+                if (localStorage.getItem('cookiesAccepted')) {
+                    cookieBanner.style.display = 'none';
+                }
+
+                cookieAccept.addEventListener('click', () => {
+                    cookieBanner.style.opacity = '0';
+                    setTimeout(() => {
+                        cookieBanner.style.display = 'none';
+                    }, 500);
+                    localStorage.setItem('cookiesAccepted', 'true');
+                });
+            }
+
+            // Infinite Slider Logic
+            const track = document.getElementById('hero-slider-track');
+            const prevBtn = document.getElementById('slider-prev');
+            const nextBtn = document.getElementById('slider-next');
+            const swipeHint = document.getElementById('swipe-hint');
+            let isTransitioning = false;
+            let hintTimeout = setTimeout(() => {
+                if (swipeHint) swipeHint.style.opacity = '0';
+            }, 3500);
+
+            function updateDots() {
+                if (!track.firstElementChild) return;
+                const activeIndex = track.firstElementChild.getAttribute('data-index');
+                document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+                    if (index == activeIndex) {
+                        dot.classList.add('bg-y2k-magenta');
+                        dot.classList.remove('bg-white');
+                    } else {
+                        dot.classList.add('bg-white');
+                        dot.classList.remove('bg-y2k-magenta');
+                    }
+                });
+            }
+
+            function slideNext() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                if (swipeHint) swipeHint.style.opacity = '0'; // hide hint on interaction
+                track.style.transition = 'transform 0.4s ease-in-out';
+                track.style.transform = 'translateX(-100%)';
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    track.appendChild(track.firstElementChild); // move first to last
+                    track.style.transform = 'translateX(0)';
+                    updateDots();
+                    isTransitioning = false;
+                }, 400);
+            }
+
+            function slidePrev() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                if (swipeHint) swipeHint.style.opacity = '0'; // hide hint on interaction
+                track.style.transition = 'none';
+                track.prepend(track.lastElementChild); // move last to first
+                track.style.transform = 'translateX(-100%)';
+
+                // Force reflow
+                void track.offsetWidth;
+
+                track.style.transition = 'transform 0.4s ease-in-out';
+                track.style.transform = 'translateX(0)';
+                setTimeout(() => {
+                    updateDots();
+                    isTransitioning = false;
+                }, 400);
+            }
+
+            if (prevBtn && nextBtn && track) {
+                prevBtn.addEventListener('click', slidePrev);
+                nextBtn.addEventListener('click', slideNext);
+
+                // Touch support
+                let startX = 0;
+                let currentX = 0;
+                track.addEventListener('touchstart', e => {
+                    startX = e.touches[0].clientX;
+                    currentX = startX;
+                }, { passive: true });
+                track.addEventListener('touchmove', e => {
+                    currentX = e.touches[0].clientX;
+                }, { passive: true });
+                track.addEventListener('touchend', e => {
+                    if (startX - currentX > 40) slideNext();
+                    if (currentX - startX > 40) slidePrev();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
