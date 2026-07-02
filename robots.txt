@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /.agents/
+Disallow: /.git/
+Disallow: /.netlify/
+
+Sitemap: https://nikti-salon.ru/sitemap.xml
+
+# NIKTI — Студия маникюра в Самаре
