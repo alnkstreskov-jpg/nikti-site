@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\sasat\\.gemini\\antigravity-ide\\scratch\\family-photo-archive"
+publish = "."
 publishOrigin = "default"
 
 [build.environment]
