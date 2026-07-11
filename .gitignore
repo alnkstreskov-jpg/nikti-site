@@ -1,0 +1,8 @@
+# Helper scripts (not for deployment)
+*.py
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+*.swp

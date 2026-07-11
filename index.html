@@ -25,7 +25,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NIKTI — Маникюр и наращивание ногтей в Самаре">
-    <meta name="twitter:description" content="Студия эстетичного маникюра NIKTI в Самаре — дизайн, наращивание, укрепление. Стерилизация по СанПиН. Запишитесь онлайн!">
+    <meta name="twitter:description"
+        content="Студия эстетичного маникюра NIKTI в Самаре — дизайн, наращивание, укрепление. Стерилизация по СанПиН. Запишитесь онлайн!">
     <meta name="twitter:image" content="https://manicuresamara.ru/logo.png">
 
     <!-- LocalBusiness Schema (NailSalon) -->
@@ -33,10 +34,12 @@
     {
       "@context": "https://schema.org",
       "@type": "NailSalon",
+      "@id": "https://manicuresamara.ru/#organization",
       "name": "NIKTI",
       "alternateName": "Студия маникюра NIKTI",
       "description": "Студия маникюра и наращивания ногтей в Самаре. Дизайн, укрепление, гель-лак. Стерилизация по СанПиН в 3 этапа.",
       "url": "https://manicuresamara.ru",
+      "logo": "https://manicuresamara.ru/logo.png",
       "telephone": "+79171527505",
       "email": "niktismr63@gmail.com",
       "image": "https://manicuresamara.ru/logo.png",
@@ -80,6 +83,104 @@
         "https://t.me/nikti63"
       ]
     }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Главная",
+        "item": "https://manicuresamara.ru/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Прайс",
+        "item": "https://manicuresamara.ru/#prices"
+      }]
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Сколько стоит маникюр в Самаре?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В студии NIKTI маникюр с покрытием гель-лаком и укреплением стоит от 2000 рублей."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Делаете ли вы наращивание ногтей?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, мы делаем наращивание ногтей. Стоимость процедуры — от 2500 рублей."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Где находится студия маникюра NIKTI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Студия маникюра NIKTI находится в центре Самары по адресу: ул. Куйбышева, 78."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Как стерилизуются инструменты?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Инструменты проходят строгую 3-этапную стерилизацию по нормам СанПиН, включая дезинфекцию, предстерилизационную очистку и обработку в сухожаровом шкафу. Крафт-пакет вскрывается при вас."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Как записаться на маникюр в Самаре?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Записаться можно онлайн через кнопку на сайте, а также написав нам в VK (vk.com/nikti_63) или Telegram (@nikti63). Мы работаем ежедневно с 10:00 до 22:00."
+        }
+      }]
+    }
+    </script>
+
+    <!-- Service / Offer Schema -->
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Маникюр с покрытием гель-лаком и укреплением",
+      "provider": { "@id": "https://manicuresamara.ru/#organization" },
+      "areaServed": {
+        "@type": "City",
+        "name": "Самара"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "2000",
+        "priceCurrency": "RUB",
+        "url": "https://manicuresamara.ru/#prices"
+      }
+    }, {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Наращивание ногтей",
+      "provider": { "@id": "https://manicuresamara.ru/#organization" },
+      "areaServed": {
+        "@type": "City",
+        "name": "Самара"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "2500",
+        "priceCurrency": "RUB",
+        "url": "https://manicuresamara.ru/#prices"
+      }
+    }]
     </script>
 
     <!-- Google Fonts -->
@@ -320,6 +421,26 @@
             justify-content: center;
         }
     </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110602002', 'ym');
+
+        ym(110602002, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/110602002" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -341,7 +462,7 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <!-- Оригинальный логотип-картинка -->
-                <img src="./logo.png" fetchpriority="high" alt="Логотип студии маникюра NIKTI Самара"
+                <img width="100" height="100" src="./logo.png" fetchpriority="high" alt="Логотип студии маникюра NIKTI Самара"
                     class="h-16 md:h-20 object-contain transform hover:scale-105 transition-transform cursor-pointer">
             </div>
 
@@ -349,6 +470,7 @@
                 <a href="#gallery" class="hover:text-y2k-magenta transition-colors">Галерея</a>
                 <a href="#prices" class="hover:text-y2k-magenta transition-colors">Прайс</a>
                 <a href="#safety" class="hover:text-y2k-magenta transition-colors">Безопасность</a>
+                <a href="#faq" class="hover:text-y2k-magenta transition-colors">FAQ</a>
                 <a href="#contacts" class="hover:text-y2k-magenta transition-colors">Контакты</a>
             </nav>
 
@@ -375,7 +497,7 @@
     <main class="flex-grow">
 
         <!-- Hero Section / About -->
-        <section id="about" class="py-16 px-6 md:px-8 relative overflow-hidden bg-white border-b-4 border-black">
+        <article id="about" class="py-16 px-6 md:px-8 relative overflow-hidden bg-white border-b-4 border-black">
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -399,17 +521,17 @@
                                 <div id="hero-slider-track"
                                     class="flex w-full h-full transition-transform duration-400 ease-in-out">
                                     <div class="min-w-full h-full relative" data-index="0">
-                                        <img src="./i.jpg" fetchpriority="high"
+                                        <img width="800" height="1200" src="./i.jpg" fetchpriority="high"
                                             alt="Маникюр и дизайн ногтей в студии NIKTI Самара"
                                             class="w-full h-full object-cover">
                                     </div>
                                     <div class="min-w-full h-full relative" data-index="1">
-                                        <img src="./interior/XXXL%20(1).webp"
+                                        <img width="800" height="1000" src="./interior/XXXL%20(1).webp"
                                             alt="Уютный интерьер маникюрного салона NIKTI в Самаре"
                                             class="w-full h-full object-cover">
                                     </div>
                                     <div class="min-w-full h-full relative" data-index="2">
-                                        <img src="./interior/XXXL%20(2).webp"
+                                        <img width="800" height="1000" src="./interior/XXXL%20(2).webp"
                                             alt="Рабочее место мастера маникюра в студии NIKTI"
                                             class="w-full h-full object-cover">
                                     </div>
@@ -517,7 +639,7 @@
 
                 </div>
             </div>
-        </section>
+        </article>
 
         <!-- Gallery Section -->
         <section id="gallery" class="py-16 px-6 md:px-8 relative overflow-hidden">
@@ -543,7 +665,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                         <div
                             class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/-dMEXx_n6Wlwxg_3HzEtHJZt_-rPZgUOAT-n8k9nHdGYJIXmgdniKb9-YuIJHeGlRy2CupTx38aR4chP-B1ETKE3.jpg"
+                            <img width="800" height="800" src="./ph/-dMEXx_n6Wlwxg_3HzEtHJZt_-rPZgUOAT-n8k9nHdGYJIXmgdniKb9-YuIJHeGlRy2CupTx38aR4chP-B1ETKE3.jpg"
                                 alt="Эстетичный дизайн ногтей — работа мастера NIKTI Самара"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
@@ -552,7 +674,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
                         <div
                             class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/4KHonLB517uZZS_-oko-_8qjnAe2SLT_HbxrMWc1pE0AHpOgub-i_7c6SvoNOUJHwiVI6QjinSTOwPWP_T-n8XEn.jpg"
+                            <img width="800" height="800" src="./ph/4KHonLB517uZZS_-oko-_8qjnAe2SLT_HbxrMWc1pE0AHpOgub-i_7c6SvoNOUJHwiVI6QjinSTOwPWP_T-n8XEn.jpg"
                                 alt="Нежный маникюр с укреплением — портфолио NIKTI Самара"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
@@ -561,7 +683,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
                         <div
                             class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/9weMyfiovbNINcOCqFPgnG1JQZsWdHC5lrNce2SaqYKSyEMX0NxIzFgq71ghJoLNLAwKMcShrDrRol_A6ywDcIxK.jpg"
+                            <img width="800" height="800" src="./ph/9weMyfiovbNINcOCqFPgnG1JQZsWdHC5lrNce2SaqYKSyEMX0NxIzFgq71ghJoLNLAwKMcShrDrRol_A6ywDcIxK.jpg"
                                 alt="Трендовый дизайн ногтей с наращиванием — NIKTI Самара"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
@@ -570,7 +692,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
                         <div
                             class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/EDa7hJVzpuc.jpg" alt="Маникюр гель-лаком с минималистичным дизайном — NIKTI"
+                            <img width="800" height="800" src="./ph/EDa7hJVzpuc.jpg" alt="Маникюр гель-лаком с минималистичным дизайном — NIKTI"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
@@ -578,7 +700,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                         <div
                             class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/KCMN3iFigv4.jpg"
+                            <img width="800" height="800" src="./ph/KCMN3iFigv4.jpg"
                                 alt="Стильное покрытие ногтей — студия маникюра NIKTI Самара"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
@@ -587,7 +709,7 @@
                         class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
                         <div
                             class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                            <img src="./ph/L0F89CNYbZCyeIW3Hwc2-pzEEdAvbcRP8OBxuCCNumEpUaAZVvffEMVniy3Aux_yDL295TycDSi-dLBgxKO6xANN.jpg"
+                            <img width="800" height="800" src="./ph/L0F89CNYbZCyeIW3Hwc2-pzEEdAvbcRP8OBxuCCNumEpUaAZVvffEMVniy3Aux_yDL295TycDSi-dLBgxKO6xANN.jpg"
                                 alt="Авторский нейл-арт — наращивание ногтей NIKTI Самара"
                                 class="w-full h-full object-cover" loading="lazy">
                         </div>
@@ -601,7 +723,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/L2aSXQpVPuA.jpg"
+                                <img width="800" height="800" src="./ph/L2aSXQpVPuA.jpg"
                                     alt="Комбинированный маникюр с дизайном — салон NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -610,7 +732,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/LnKU9VvnaGphZCjQKkrrCuDC_rG_3lXwNHPVDGaAlGsdUhJkZu0cQboGQerhsH2RjF2DlMWCNK56J836tWQbnUTe.jpg"
+                                <img width="800" height="800" src="./ph/LnKU9VvnaGphZCjQKkrrCuDC_rG_3lXwNHPVDGaAlGsdUhJkZu0cQboGQerhsH2RjF2DlMWCNK56J836tWQbnUTe.jpg"
                                     alt="Яркий дизайн ногтей с декором — мастер NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -619,7 +741,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/Ow-j7OJMINxeXCEbPdViWy4a0LyerHwddchdfuQI6BulbcfMJ9HvvkyOVDJx0rzOT1JZvjhPsG0-asBRADfWn6H_.jpg"
+                                <img width="800" height="800" src="./ph/Ow-j7OJMINxeXCEbPdViWy4a0LyerHwddchdfuQI6BulbcfMJ9HvvkyOVDJx0rzOT1JZvjhPsG0-asBRADfWn6H_.jpg"
                                     alt="Наращивание ногтей с художественным дизайном — NIKTI"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -628,7 +750,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/PvwSGTOsoZxpaKBQhsnDfc0kZrtshKEEYinGm7osO469Z5tpZEhSibv0zOTztm4_kKNnPAze4kfZ1dmkZT4eqK2u.jpg"
+                                <img width="800" height="800" src="./ph/PvwSGTOsoZxpaKBQhsnDfc0kZrtshKEEYinGm7osO469Z5tpZEhSibv0zOTztm4_kKNnPAze4kfZ1dmkZT4eqK2u.jpg"
                                     alt="Френч маникюр и классический дизайн — NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -637,7 +759,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/ZcHXS8ON-O811Xx3G4E5UiT4j_oOnmpCvztqKfJ4PuwaJ0gUUrFUBBSnVfq30OJoyG-hcz1We7-wY0AnH-VYc1Ao.jpg"
+                                <img width="800" height="800" src="./ph/ZcHXS8ON-O811Xx3G4E5UiT4j_oOnmpCvztqKfJ4PuwaJ0gUUrFUBBSnVfq30OJoyG-hcz1We7-wY0AnH-VYc1Ao.jpg"
                                     alt="Укрепление ногтей гель-лаком — портфолио NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -646,7 +768,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/a1176411082ad9662f732b66af6fd750.jpg"
+                                <img width="800" height="800" src="./ph/a1176411082ad9662f732b66af6fd750.jpg"
                                     alt="Нюдовый маникюр с нежным дизайном — студия NIKTI"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -655,7 +777,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/fgcDjzjueDw.jpg"
+                                <img width="800" height="800" src="./ph/fgcDjzjueDw.jpg"
                                     alt="Модный маникюр с блёстками — мастер ногтей NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -664,7 +786,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/hf0xmcWmf2DuUcLOs00Z6lDzLtpxf1eenrTCTNRS8xsv3V6ObfqposyPV-SRORju6QAw9qOKzotDBr9VH2llNUcI.jpg"
+                                <img width="800" height="800" src="./ph/hf0xmcWmf2DuUcLOs00Z6lDzLtpxf1eenrTCTNRS8xsv3V6ObfqposyPV-SRORju6QAw9qOKzotDBr9VH2llNUcI.jpg"
                                     alt="Геометрический дизайн ногтей — наращивание NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -673,7 +795,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/mcYmiCkF4NWGvFPk-vlAmoPiTg5lcuhTOEhmhLJMvX_FyTFHtVwR1DAg7Z77kxRjE53WVBQaYNDo5MlUHi9LR_SN.jpg"
+                                <img width="800" height="800" src="./ph/mcYmiCkF4NWGvFPk-vlAmoPiTg5lcuhTOEhmhLJMvX_FyTFHtVwR1DAg7Z77kxRjE53WVBQaYNDo5MlUHi9LR_SN.jpg"
                                     alt="Праздничный маникюр со стразами — салон NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -682,7 +804,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/orig.jpg" alt="Матовый маникюр — покрытие ногтей в студии NIKTI"
+                                <img width="800" height="800" src="./ph/orig.jpg" alt="Матовый маникюр — покрытие ногтей в студии NIKTI"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
                         </div>
@@ -690,7 +812,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202%20(1).png"
+                                <img width="800" height="800" src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202%20(1).png"
                                     alt="Авторский дизайн ногтей — маникюр Самара NIKTI"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -699,7 +821,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D1%8F%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png"
+                                <img width="800" height="800" src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D1%8F%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png"
                                     alt="Креативный нейл-дизайн — наращивание ногтей Самара NIKTI"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -708,7 +830,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-1 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-yellow flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D1%8F%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202.png"
+                                <img width="800" height="800" src="./ph/qqq%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D1%8F%D0%BB%D0%B0%D1%81%D1%82%D1%8C%202.png"
                                     alt="Элегантный маникюр с декором — мастер NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -717,7 +839,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:-rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-magenta flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/vUGPf6xQQAWsu967tizQr7-JFL0tOZF_SrkUXttF26LsnJA24JKDxN7i16RX9C67QhxO-N0ucYz7rk107cZmdgBk.jpg"
+                                <img width="800" height="800" src="./ph/vUGPf6xQQAWsu967tizQr7-JFL0tOZF_SrkUXttF26LsnJA24JKDxN7i16RX9C67QhxO-N0ucYz7rk107cZmdgBk.jpg"
                                     alt="Градиентный дизайн ногтей — укрепление NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -726,7 +848,7 @@
                             class="bg-white p-2 border-4 border-black shadow-brutal transform hover:rotate-2 transition-transform">
                             <div
                                 class="aspect-square bg-y2k-blue flex items-center justify-center overflow-hidden border-2 border-black">
-                                <img src="./ph/w6gnkAgGL0N6nclWd5266699AhB7K3PH2cgT5q3b2swuvgjy5uWJLCXz3BPrRBetXct49OPa_uJRgZ_tgteoElv-.jpg"
+                                <img width="800" height="800" src="./ph/w6gnkAgGL0N6nclWd5266699AhB7K3PH2cgT5q3b2swuvgjy5uWJLCXz3BPrRBetXct49OPa_uJRgZ_tgteoElv-.jpg"
                                     alt="Эксклюзивный нейл-арт — дизайн ногтей студия NIKTI Самара"
                                     class="w-full h-full object-cover" loading="lazy">
                             </div>
@@ -748,7 +870,7 @@
             </div>
         </section>
         <!-- Pricing Section -->
-        <section id="prices" class="py-16 px-6 md:px-8 relative overflow-hidden">
+        <article id="prices" class="py-16 px-6 md:px-8 relative overflow-hidden">
             <!-- Decorative SVG Star (Prices) -->
             <svg class="star-spin absolute top-10 right-10 md:right-32 w-16 h-16 text-y2k-blue fill-current drop-shadow-[2px_2px_0_rgba(0,0,0,1)] z-0"
                 style="animation-duration: 8s;" viewBox="0 0 24 24">
@@ -955,7 +1077,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
 
         <!-- Sterilization Section -->
         <section id="safety" class="py-16 px-4 sm:px-6 md:px-8 relative overflow-hidden">
@@ -973,7 +1095,7 @@
                     <!-- Image -->
                     <div
                         class="bg-y2k-blue p-2 border-4 border-black rotate-2 shadow-brutal mx-auto w-[95%] md:w-full mb-4 md:mb-0">
-                        <img src="./XXXL.jpg" alt="Стерилизация маникюрных инструментов по СанПиН в салоне NIKTI Самара"
+                        <img width="800" height="1000" src="./XXXL.jpg" alt="Стерилизация маникюрных инструментов по СанПиН в салоне NIKTI Самара"
                             class="w-full h-auto border-2 border-black" loading="lazy">
                     </div>
 
@@ -1004,6 +1126,43 @@
                                 сухожарового шкафа
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 px-6 md:px-8 relative overflow-hidden bg-y2k-yellow border-y-4 border-black">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <h2 class="font-syne font-black text-4xl md:text-5xl uppercase mb-10 text-center drop-shadow-[2px_2px_0_rgba(0,0,0,1)] text-y2k-blue bg-white px-4 py-2 border-4 border-black rotate-[-1deg] mx-auto w-fit">
+                    Частые вопросы
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="bg-white border-4 border-black shadow-brutal p-6 transform hover:-translate-y-1 transition-transform">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-2">Сколько стоит маникюр в Самаре?</h3>
+                        <p class="font-inter font-semibold">В студии NIKTI маникюр с покрытием гель-лаком и укреплением стоит от 2000 рублей.</p>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="bg-white border-4 border-black shadow-brutal p-6 transform hover:-translate-y-1 transition-transform">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-2">Делаете ли вы наращивание ногтей?</h3>
+                        <p class="font-inter font-semibold">Да, мы делаем наращивание ногтей. Стоимость процедуры — от 2500 рублей.</p>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="bg-white border-4 border-black shadow-brutal p-6 transform hover:-translate-y-1 transition-transform">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-2">Где находится студия маникюра NIKTI?</h3>
+                        <p class="font-inter font-semibold">Студия маникюра NIKTI находится в центре Самары по адресу: ул. Куйбышева, 78.</p>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="bg-white border-4 border-black shadow-brutal p-6 transform hover:-translate-y-1 transition-transform">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-2">Как стерилизуются инструменты?</h3>
+                        <p class="font-inter font-semibold">Инструменты проходят строгую 3-этапную стерилизацию по нормам СанПиН, включая дезинфекцию, предстерилизационную очистку и обработку в сухожаровом шкафу. Крафт-пакет вскрывается при вас.</p>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="bg-white border-4 border-black shadow-brutal p-6 transform hover:-translate-y-1 transition-transform">
+                        <h3 class="font-syne font-bold text-xl uppercase mb-2">Как записаться на маникюр в Самаре?</h3>
+                        <p class="font-inter font-semibold">Записаться можно онлайн через кнопку на сайте, а также написав нам в VK (vk.com/nikti_63) или Telegram (@nikti63). Мы работаем ежедневно с 10:00 до 22:00.</p>
                     </div>
                 </div>
             </div>
@@ -1060,6 +1219,14 @@
                         Telegram
                     </a>
                 </div>
+
+                <address class="mt-8 font-inter not-italic text-sm text-gray-300 space-y-2">
+                    <strong class="text-white text-base">Студия маникюра NIKTI</strong><br>
+                    📍 г. Самара, ул. Куйбышева, 78<br>
+                    📞 <a href="tel:+79171527505" class="hover:text-y2k-yellow">+7 (917) 152-75-05</a><br>
+                    ✉️ <a href="mailto:niktismr63@gmail.com" class="hover:text-y2k-yellow">niktismr63@gmail.com</a><br>
+                    🕐 Ежедневно 10:00–22:00
+                </address>
             </div>
 
             <!-- Consent Form / Data processing -->
@@ -1277,6 +1444,7 @@
             <a href="#gallery" class="hover:text-y2k-magenta transition-colors p-2">Галерея</a>
             <a href="#prices" class="hover:text-y2k-magenta transition-colors p-2">Прайс</a>
             <a href="#safety" class="hover:text-y2k-magenta transition-colors p-2">Безопасность</a>
+            <a href="#faq" class="hover:text-y2k-magenta transition-colors p-2">FAQ</a>
             <a href="#contacts" class="hover:text-y2k-magenta transition-colors p-2">Контакты</a>
         </div>
     </nav>

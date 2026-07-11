@@ -27,6 +27,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Update sitemap lastmod
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          sed -i "s|<lastmod>[0-9-]*</lastmod>|<lastmod>$TODAY</lastmod>|g" sitemap.xml
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -35,3 +40,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify IndexNow (Yandex)
+        if: success()
+        run: |
+          curl -s -X POST "https://yandex.com/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "manicuresamara.ru",
+              "key": "762d057a66b54133b1e3895315a6b7e0",
+              "keyLocation": "https://manicuresamara.ru/762d057a66b54133b1e3895315a6b7e0.txt",
+              "urlList": [
+                "https://manicuresamara.ru/",
+                "https://manicuresamara.ru/policy.html",
+                "https://manicuresamara.ru/consent.html"
+              ]
+            }'

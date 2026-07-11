@@ -6,4 +6,7 @@ Disallow: /.netlify/
 
 Sitemap: https://manicuresamara.ru/sitemap.xml
 
+# AI-agent file
+Llms-txt: https://manicuresamara.ru/llms.txt
+
 # NIKTI — Студия маникюра в Самаре
