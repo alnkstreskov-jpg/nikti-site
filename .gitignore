@@ -1,6 +1,8 @@
 # Helper scripts (not for deployment)
 *.py
 __pycache__/
+node_modules/
+SEO_AUDIT_*.md
 
 # IDE
 .idea/
